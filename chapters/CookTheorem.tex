@@ -29,16 +29,14 @@ $O(n^k)$}.
 конфигурации этой МТ.
 \begin{table}[htpb]
 	\centering
-	\label{tab:label}
-	\begin{tabular}{|c|c|c|c| c|c|c |c|c|c| c|c|c|c|}
-\hline №&$-n^k$& \ldots&\ldots& $-m$& \ldots&$-1$&$0$& $1$ &\ldots&$l$&
-		\ldots& \ldots&$n^k$\\
+	\begin{tabular}{|c|c| c|c|c |c|c|c| c|c|}
+\hline №&$-n^k$\ldots& $-m$& \ldots&$-1$&$0$& $1$ &\ldots&$l$&
+		\ldots$n^k$\\
 		\hline
-		      0&$\lambda$ & \ldots &
-		      $\lambda$&$u_m$&\ldots&$u_1$&$q_0$&$v_1$&\ldots&$v_l$
-			       &$\lambda$& \ldots&$\lambda$\\\hline
+		      0&$\lambda$\ldots$\lambda$&$u_m$&\ldots&$u_1$&$q_0$&$v_1$&\ldots&$v_l$
+			       &$\lambda$\ldots$\lambda$\\\hline
 \hline
-$n^k$&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&$q_{final}$&\ldots&\ldots&\ldots&\ldots\\\hline
+$n^k$&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&$q_{final}$&\ldots&\ldots\\\hline
 	\end{tabular}
 \end{table}
 
@@ -52,9 +50,7 @@ $n^k$&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&$q_{final}$&\ldots
 		условия $v_1, \ldots, v_l$, а после  $n^k-l$ символов  $\lambda$
 	\item В $n^k$-й строке есть ячейка, содержащая $q_{final}$
 	\item $k$-я и $(k+1)$-я строки различаются не более чем окошком $2\times
-		3$, имеющем вид одной из трёх таблиц:
-		\marginnote{Окошки соответствуют переходам $qb \to
-		q'cR; qb\to q'cSt; qb\to q'cL $}
+		3$, имеющем вид одной из трёх таблиц, которые соответствуют переходам $qb \to q'cR;$ $qb\to q'cSt;$ $qb\to q'cL $:		
 
 \begin{table}[h!]
 \centering
@@ -64,6 +60,7 @@ $n^k$&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&$q_{final}$&\ldots
 \hline
 \end{tabular}
 \end{table}
+
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|}
@@ -72,6 +69,7 @@ $n^k$&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&$q_{final}$&\ldots
 \hline
 \end{tabular}
 \end{table}
+
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|}
@@ -92,14 +90,14 @@ $a, b, c \in A; q, q' \in S$
 конфигураций содержится символ  $\sigma$ и = 0 во всех остальных случаях.
 
 Первая формула запишется как \[
-	\phi_{line} = \&_{-n^k\le i, j\le n^k} \left( \left( \cup_{\sigma \in A\cup S \cup
-	\{\lambda \} } \left( x_{i,j,\sigma}  \right)  \right)\&
+	\phi_{line} = \bigcap\limits_{-n^k\le i, j\le n^k} \left( \left( \bigcup\limits_{\sigma \in A\cup S \cup
+	\{\lambda \} } \left( x_{i,j,\sigma}  \right)  \right) \cap
 	\\
 	\left(
-	\&_{\substack{\sigma\in A\cup S \cup
+	\bigcap\limits_{\substack{\sigma\in A\cup S \cup
 	\{\lambda \}
 	, \\
-\xi\in A\cup S \cup \{\lambda \},\\
+\xi\in A\cup S \cup\{\lambda \},\\
 \sigma \neq \xi
 	}} \left( \overline{x_{i,j,\sigma}} \cdot \overline{x_{i,j,\xi}} \right)
 \right) \right)
@@ -131,7 +129,9 @@ $a, b, c \in A; q, q' \in S$
 Утверждение 4 обобщённо будет записано так:
  \[
 	 \phi_{compute} =  \&_{i\le i\le n^k} (\phi_{i, (i+1)})
-.\] 
+.\]
+
+Продолжение следует\ldots
 \end{proof}
 
 
