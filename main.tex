@@ -36,9 +36,10 @@
 ]{kaobook}
 
 % Set the language
-\usepackage[english,russian]{babel} % Load characters and hyphenation
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
 \usepackage[english=british]{csquotes} % English quotes
-
 % Load packages for testing
 \usepackage{blindtext}
 %\usepackage{showframe} % Uncomment to show boxes around the text area, margin, header and footer
@@ -79,7 +80,7 @@
 
 \author[Ruslan Kulagin]{Руслан Кулагин}
 
-\date{\today}
+\date{весна 2021}
 
 %\publishers{An Awesome Publisher}
 
@@ -196,17 +197,6 @@
 
 %----------------------------------------------------------------------------------------
 
-\backmatter % Denotes the end of the main document content
-\setchapterstyle{plain} % Output plain chapters from this point onwards
-
-
-%----------------------------------------------------------------------------------------
-%	INDEX
-%----------------------------------------------------------------------------------------
-
-% The index needs to be compiled on the command line with 'makeindex main' from the template directory
-
-\printindex % Output the index
 
 %----------------------------------------------------------------------------------------
 %	BACK COVER
