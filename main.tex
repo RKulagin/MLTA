@@ -65,6 +65,13 @@
 %\counterwithin*{sidenote}{chapter}
 
 %----------------------------------------------------------------------------------------
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{graphicx}
+
+\newcommand{\incfig}[1]{\def\svgwidth{\columnwidth}\input{images/#1.pdf_tex}}
 
 \begin{document}
 
@@ -194,6 +201,7 @@
 
 \input{chapters/NP.tex}
 
+\input{chapters/functional.tex}
 
 %----------------------------------------------------------------------------------------
 
