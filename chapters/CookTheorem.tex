@@ -99,7 +99,7 @@ $a, b, c \in A; q, q' \in S$
 	, \\
 \xi\in A\cup S \cup\{\lambda \},\\
 \sigma \neq \xi
-	}} \left( \overline{x_{i,j,\sigma}} \cdot \overline{x_{i,j,\xi}} \right)
+	}} \left( \overline{x_{i,j,\sigma}} \cup \overline{x_{i,j,\xi}} \right)
 \right) \right)
 .\] 
 
@@ -131,7 +131,26 @@ $a, b, c \in A; q, q' \in S$
 	 \phi_{compute} =  \&_{i\le i\le n^k} (\phi_{i, (i+1)})
 .\]
 
-Продолжение следует\ldots
+\[
+	\phi_{i, (i+1)} = (\text{в $j$-м столбце $i$-й строки стоит символ
+			состояния})\cdot 
+		\]
+		\[\cdot (\bigcup\limits_{u=\overline{1, p}}\left( O_{i,
+	(i+1)} \sim O_u \right) )
+.\]
+
+$O_p$ --- окошко  $2\times 3$ , соответствующее p-й команде. $O_{i, (i+1)}$ ---
+окошко, показывающее различие строк i и i+1
+
+Длина  $|\phi_{i, (i+1)}| = O(n^k)$
+
+ \[
+	 |\phi_0 \cdot \phi_{start}\cdot \phi_{accept} \cdot  \phi_{copmute}| =
+ O(n^{2k}
+.\] 
+Если ответ да, то существует требуемая таблица выполнимости, и есть в этой
+таблице финальное состояние, показывающее, что ответ существует. Значит, формула
+выполнима. 
 \end{proof}
 
 
