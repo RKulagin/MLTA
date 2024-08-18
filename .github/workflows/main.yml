@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: RKulagin/MLTA/actions/miktex@master
+      - uses: RKulagin/MLTA/actions/miktex
 
       - name: Compile book
         run: |
